@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+ * {
+    box-sizing: border-box;
+ }
+
+body{
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #061f12;
+}
+
+.card{
+    max-width:350px;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.card .header{
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .header .img{
+    height: 70px;
+    width: 70px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.header .details{
+    margin-left: 20px;
+}
+
+.details span{
+    background: #d9d9d9;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;   
+}
+
+.details .name{
+    width: 100px;
+    height: 15px;
+}
+
+.details .about{
+    width: 150px;
+    height: 13px;
+    margin-top: 10px;
+}
+
+.card .content{
+    margin: 25px 0;
+}
+
+.content .line{
+    background: #d9d9d9;
+    height: 13px;
+    border-radius: 10px;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.content .line-1{
+    width: 230px;
+}
+
+
+.content .line-3{
+    width: 160px;
+}
+
+.card .btns{
+    display: flex;
+}
+
+.card .btns .btn{
+    height: 45px;
+    width: 100%;
+    background-color: #d9d9d9;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btns .btn-1{
+    margin-right: 8px;
+}
+
+
+.btns .btn-2{
+    margin-left: 8px;
+}
+.card .header .img::before,  .details span::before,
+.content .line::before, .btns .btn::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    background-image: linear-gradient(to right, #b9b9b9 0%, rgba(0,0,0,0.05) 20%, #b9b9b9 40%, #b9b9b9 100%);
+    background-size: 450px 400px;
+    background-repeat: no-repeat;
+    animation: shimmer 1s linear infinite;
+    filter: blur(5px); /*BORRÃO*/
+}
+
+.details span::before, .btns .btn-2::before{
+    animation-delay: 0.2s;
+}
+
+@keyframes shimmer{
+    0%{
+        background-position: -450px 0;
+    }
+
+    100%{
+        background-position: 450px 0;
+    }
+}
+
